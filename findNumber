@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int i,j,flag=0;
+        for(i=0; i<nums.size();i++) {
+            j=i+1;
+          while(j!=nums.size()){
+              if(nums[i]!=nums[j]){
+                flag=1;
+                break;
+              }
+          }
+if(flag==1)
+break;
+    }
+    if(flag==1)
+        return nums[i];
+    else
+        return 0;
+    }
+};
